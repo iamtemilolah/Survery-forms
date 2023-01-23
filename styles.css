@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #ccc;
+	color: #636261;
+	overflow-x: hidden;
+}
+header #headings {
+	padding: 0.3rem;
+	text-align: center;
+}
+
+header #headings h1 {
+	letter-spacing: 0.2ch;
+	text-shadow: 1px 1px 3px #fff;
+}
+
+header #headings p {
+	margin-top: 0.3rem;
+}
+
+#survey-form {
+	box-shadow: 5px 5px 10px #fff;
+	border-radius: 15px;
+	border: 2px solid #ddacdd;
+	background-color: #fff;
+	margin: 0.7rem 0;
+	padding-bottom: 0.5rem;
+	max-width: 900px;
+	width: 70%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 1rem;
+	grid-template-areas:
+		"id id ques ques ques"
+		"comment comment comment comment comment"
+		"marketing marketing marketing . ."
+		"button button button button button";
+}
+
+#identity {
+	grid-area: id;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 0.7rem;
+	padding-left: 2.3rem;
+	border: none;
+}
+
+#identity span {
+	position: relative;
+	left: 50%;
+	font-size: 0.75rem;
+}
+
+#identity label {
+	font-size: 1.13rem;
+}
+
+#identity label:first-of-type,
+#identity label:nth-of-type(2) {
+	position: relative;
+	left: -1.45ch;
+}
+
+#questions {
+	grid-area: ques;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 0.7rem;
+}
+
+#questions fieldset {
+	padding: 0.3rem;
+	margin: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	border: none;
+}
+
+#questions fieldset legend {
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+#questions fieldset span {
+	font-weight: normal;
+	font-size: 0.75rem;
+}
+
+#questions fieldset div {
+	margin: 0.4rem 0;
+}
+
+#questions input,
+#questions label {
+	cursor: pointer;
+}
+
+#feedback {
+	grid-area: comment;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 15px;
+	border: none;
+}
+
+#feedback div {
+	width: 100%;
+	padding: 0.7rem;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	line-height: 1.1rem;
+}
+
+#feedback div label {
+	margin-top: 1rem;
+}
+
+#feedback textarea {
+	position: relative;
+	left: 20%;
+	width: 60%;
+	border-radius: 15px;
+	padding: 0.8rem;
+	resize: none;
+	overflow: auto;
+}
+
+#marketing {
+	grid-area: marketing;
+	padding: 0.7rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+#marketing p {
+	font-size: 1.15rem;
+	margin-bottom: 1rem;
+}
+
+#accept {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: start;
+}
+
+#accept input,
+#accept label {
+	cursor: pointer;
+}
+
+#accept input {
+	margin: 0.15rem 0;
+}
+
+#accept label {
+	margin: 0 0.5rem;
+}
+
+button {
+	background: #ccc;
+	border-color: #da70d6;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1rem;
+	letter-spacing: 0.2rem;
+	margin-top: 0.7rem;
+	margin-bottom: 0.7rem;
+	padding: 0.5rem;
+	width: 23vw;
+	cursor: pointer;
+}
+
+#submit {
+	grid-area: button;
+	align-self: center;
+	justify-self: center;
+}
+
+#submit:hover {
+	background: #fff;
+	color: #89008b;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+#reset {
+	color: #89008b;
+	border: none;
+	background: none;
+	font-size: 0.7rem;
+	font-weight: 600;
+	width: auto;
+	margin-top: 0.1rem;
+	margin-bottom: 0;
+}
+
+#reset:hover {
+	text-decoration: underline;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+	width: 90%;
+	height: 1.5rem;
+	margin-bottom: 0.2rem;
+	padding: 0.2rem;
+}
+
+input:focus,
+select:focus {
+	transform: scale(1.05);
+	border: 2px solid #89008b;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+	box-shadow: 0 0 0 1.5px #89008b;
+
+}
+
+textarea:focus {
+	border: 2px solid #89008b;
+	box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+	align-self: end;
+	margin: 0rem 1rem;
+	padding: 0.3rem;
+}
+
+@media (max-width: 900px) {
+	#survey-form {
+		width: 90%;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	select {
+		width: 100%;
+	}
+}
+
+@media (max-width: 730px) {
+	#logo {
+		left: 0.5rem;
+	}
+
+	#survey-form {
+		display: flex;
+		flex-direction: column;
+		padding: 0.25rem;
+	}
+
+	#identity {
+		padding-left: 0.7rem;
+	}
+
+	#identity span {
+		left: 65%;
+	}
+	
+	#feedback textarea {
+		width: 100%;
+		position: static;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	select {
+		width: 60%;
+	}
+
+	button {
+		width: 60vw;
+	}
+}
+
+@media (max-width: 500px) {
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	select {
+		width: 100%;
+	}
+
+	#questions,
+	#feedback {
+		flex-direction: column;
+	}
+	#feedback div,
+	#feedback textarea {
+		width: 100%;
+	}
+}

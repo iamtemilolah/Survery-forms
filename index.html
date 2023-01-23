@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Freecode camp Survey form</title>
+</head>
+<body>
+<header>
+	<div id="headings">
+		<h1 id="title">We Love Feedback On Our Product</h1>
+		<p id="description">Help us restore your trust</p>
+	</div>
+</header>
+<form action="" id="survey-form">
+	<fieldset id="identity">
+		<span>* Required fields</span>
+		<label id="name-label" for="name">* Name</label>
+		<input type="text" id="name" placeholder="Enter your name" title="Please enter your first and last name" autofocus required />
+		<label id="email-label" for="email">* Email</label>
+		<input type="email" id="email" placeholder="email@service.com" title="Please enter your email" required />
+		<label id="number-label" for="number">Age</label>
+		<input id="number" type="number" name="age" min="1" max="150" placeholder="Your age" />
+		<label for="dropdown">Gender</label>
+		<select name="gender" id="dropdown" title="Please select an option">
+					<option value="" disabled selected>Select</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="transgender">Transgender</option>
+					<option value="none">Prefer not to say</option>
+				</select>
+	</fieldset>
+
+	<div id="questions">
+		<fieldset>
+			<legend>
+				How did you acquire the item?
+			</legend>
+			<span> (Select one)</span>
+			<div class="radios">
+				<input id="website" type="radio" name="purchase-place" value="website" />
+				<label for="website">From our website</label>
+			</div>
+			<div class="radios">
+				<input id="instagram" type="radio" name="purchase-place" value="instagram" />
+				<label for="instagram">On Instagram</label>
+			</div>
+			<div class="radios">
+				<input id="store" type="radio" name="purchase-place" value="store" />
+				<label for="store">In our store</label>
+			</div>
+			<div class="radios">
+				<input id="market" type="radio" name="purchase-place" value="offtakers" />
+				<label for="offtakers">From Offtakers</label>
+			</div>
+			<div class="radios">
+				<input type="radio" id="jumia" name="purchase-place" value="jumia" />
+				<label for="amazon">On Jumia</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>
+				How did you hear about us?
+			</legend>
+			<span>(Select all that apply)</span>
+			<div class="checkboxes">
+				<input type="checkbox" id="person" value="person" name="discovery" />
+				<label for="person">In person</label>
+			</div>
+			<div class="checkboxes">
+				<input id="friend" type="checkbox" value="friend" name="discovery" />
+				<label for="friend">Friend</label>
+			</div>
+			<div class="checkboxes">
+				<input id="instagram" type="checkbox" value="instagram" name="discovery" />
+				<label for="instagram">Instagram ads</label>
+			</div>
+			<div class="checkboxes">
+				<input id="facebook" type="checkbox" value="facebook" name="discovery" />
+				<label for="facebook">Facebook ads</label>
+			</div>
+			<div class="checkboxes">
+				<input id="google" type="checkbox" value="google" name="discovery" />
+				<label for="google">Google ads</label>
+			</div>
+			<div class="checkboxes">
+				<input type="checkbox" id="jumia" value="jumia" name="discovery" />
+				<label for="jumia-search">Searching Jumia</label>
+			</div>
+		</fieldset>
+	</div>
+
+	<fieldset id="feedback">
+		<div>
+			<p>Let us know about the good, the bad AND the ugly.</p>
+			<label for="comments">We want to hear your feedback!</label>
+		</div>
+		<textarea id="comments" name="comments" cols="40" rows="5" placeholder="Share your opinion."></textarea>
+	</fieldset>
+
+	<div id="marketing">
+		<p>
+			We have a 10% off coupon code for you!
+		</p>
+		<div id="accept">
+			<input id="marketing-accept" type="checkbox" value="marketing-accept" />
+			<label for="marketing-accept">
+						Check this box if you're okay with receiving emails from our Brand.
+					</label>
+		</div>
+	</div>
+	<button form="survey-form" id="submit" type="submit">Submit</button>
+</form>
+<button form="survey-form" id="reset" type="reset">Reset</button>
+<footer>&copy 2022 designed by BTTS</footer>
+</body>
+</html>
+
+
